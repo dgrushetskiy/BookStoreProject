@@ -4,8 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "author", schema = "book_dbo")
@@ -21,7 +21,7 @@ public class Author {
     @Column(name = "last_name",length = 100)
     private String lastName;
     @OneToMany(mappedBy = "author",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Book> books = new ArrayList<>();
+    private Set<Book> books = new HashSet<>();
 
     public String getFullName (){
         return getFirstName() + " " + getLastName();
