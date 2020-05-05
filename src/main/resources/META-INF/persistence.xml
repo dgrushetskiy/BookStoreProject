@@ -7,7 +7,6 @@
         <description>The persistence unit of the DATABASE book_store example project.</description>
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
-
         <properties>
             <!-- database connection -->
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
